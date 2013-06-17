@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-configuration xmlns="http://www.mulesoft.com/tooling/messageflow" name="mule-file-string">
+    <global-element type="org.mule.tooling.ui.modules.core.global.fileConnector" name="File" entity-id="File#1">
+        <properties>
+            <property value="FileInputConnector" name="name"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="outputPattern"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="writeToDirectory"/>
+            <property name="readFromDirectory"/>
+            <property name="workDirectory"/>
+            <property name="workFileNamePattern"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="true" name="autoDelete"/>
+            <property name="outputAppend"/>
+            <property value="true" name="streaming"/>
+            <property name="recursive"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="dispatcherPoolFactory-ref"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="dynamicNotification"/>
+            <property value="true" name="validateConnections"/>
+            <property name="serialiseObjects"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="pollingFrequency"/>
+            <property name="fileAge"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="moveToPattern"/>
+            <property name="moveToDirectory"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="comparator"/>
+            <property name="reverseOrder"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property-collection name="@http://www.mulesoft.org/schema/mule/file/expression-filename-parser;0">
+                <property value="2" name="auxiliary;wrapIn"/>
+                <property value="2" name="auxiliary;index"/>
+            </property-collection>
+        </properties>
+    </global-element>
+    <global-element type="org.mule.tooling.ui.modules.core.global.fileConnector" name="File" entity-id="File#2">
+        <properties>
+            <property value="FileOutputConnector" name="name"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="outputPattern"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="writeToDirectory"/>
+            <property name="readFromDirectory"/>
+            <property name="workDirectory"/>
+            <property name="workFileNamePattern"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="true" name="autoDelete"/>
+            <property name="outputAppend"/>
+            <property value="true" name="streaming"/>
+            <property name="recursive"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="dispatcherPoolFactory-ref"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="dynamicNotification"/>
+            <property value="true" name="validateConnections"/>
+            <property name="serialiseObjects"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="pollingFrequency"/>
+            <property name="fileAge"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="moveToPattern"/>
+            <property name="moveToDirectory"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+            <property name="comparator"/>
+            <property name="reverseOrder"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+            <property value="3" name="auxiliary;index"/>
+        </properties>
+    </global-element>
+    <global-element type="org.mule.tooling.ui.modules.core.global.fileConnector" name="File" entity-id="File#3">
+        <properties>
+            <property value="File" name="name"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="outputPattern"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="writeToDirectory"/>
+            <property name="readFromDirectory"/>
+            <property name="workDirectory"/>
+            <property name="workFileNamePattern"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="true" name="autoDelete"/>
+            <property name="outputAppend"/>
+            <property value="true" name="streaming"/>
+            <property name="recursive"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="dispatcherPoolFactory-ref"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="dynamicNotification"/>
+            <property value="true" name="validateConnections"/>
+            <property name="serialiseObjects"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="pollingFrequency"/>
+            <property name="fileAge"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="moveToPattern"/>
+            <property name="moveToDirectory"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="comparator"/>
+            <property name="reverseOrder"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+        </properties>
+    </global-element>
+    <global-element type="http://www.mulesoft.org/schema/mule/ee/data-mapper/config" name="DataMapper" entity-id="DataMapper#1">
+        <properties>
+            <property value="string-string" name="name"/>
+            <property value="string-string.grf" name="transformationGraphPath"/>
+            <property value="5" name="auxiliary;index"/>
+            <property value="5" name="auxiliary;index"/>
+            <property value="5" name="auxiliary;index"/>
+        </properties>
+    </global-element>
+    <flow SubFlow="false" name="mule-file-parser" entity-id="767a474e-a897-4cd9-92ae-cffccda3349b">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="6" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="6" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
+        </properties>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#1">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/file/endpoint" name="File Inbound" entity-id="File#4">
+                <properties>
+                    <property value="true" name="auxiliary;erased;mimeType"/>
+                    <property value="false" name="reverseOrder"/>
+                    <property value="" name="moveToPattern"/>
+                    <property value="" name="pollingFrequency"/>
+                    <property value="" name="businessEventsLabel"/>
+                    <property value="" name="comparator"/>
+                    <property value="false" name="disableTransportTransformer"/>
+                    <property value="one-way" name="exchange-pattern"/>
+                    <property value="false" name="tracking:enable-default-events"/>
+                    <property value="" name="ref"/>
+                    <property value="" name="transformer-refs"/>
+                    <property value="" name="moveToDirectory"/>
+                    <property value="" name="address"/>
+                    <property value="" name="fileAge"/>
+                    <property value="true" name="auxiliary;erased;encoding"/>
+                    <property value="/Users/Shuba/Documents/Test" name="path"/>
+                    <property value="" name="encoding"/>
+                    <property value="" name="mimeType"/>
+                    <property value="10000" name="responseTimeout"/>
+                    <property value="FileInputConnector" name="connector-ref"/>
+                    <property value="7" name="auxiliary;index"/>
+                    <property name="updated"/>
+                </properties>
+                <description></description>
+            </endpoint>
+            <pattern type="http://www.mulesoft.org/schema/mule/scripting/groovyTransformer" name="Tokenize File Path" entity-id="Groovy#1">
+                <properties>
+                    <property name="returnClass"/>
+                    <property name="ignoreBadInput"/>
+                    <property name="encoding"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property name="mimeType"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property value="8" name="auxiliary;index"/>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script;0">
+                        <property value="def originalFileName = message.getProperty('directory') + File.separator + message.getProperty('originalFileName');&#xA;                                message.setInvocationProperty('originalFileTokens', originalFileName.split(&quot;/&quot;));&#xA;                                return payload;" name="text"/>
+                        <property value="Groovy" name="engine"/>
+                        <property value="9" name="auxiliary;wrapIn"/>
+                        <property value="9" name="auxiliary;index"/>
+                    </property-collection>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script-for-properties;0">
+                        <property value="def originalFileName = message.getProperty('directory') + File.separator + message.getProperty('originalFileName');&#xA;                                message.setInvocationProperty('originalFileTokens', originalFileName.split(&quot;/&quot;));&#xA;                                return payload;" name="text"/>
+                        <property value="Groovy" name="engine"/>
+                        <property value="9" name="auxiliary;wrapIn"/>
+                        <property value="9" name="auxiliary;index"/>
+                    </property-collection>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/core/logger" name="Logger" entity-id="Logger#1">
+                <properties>
+                    <property value="Shuba - #[groovy:[Filepath:originalFileTokens.getAt(originalFileTokens.size()-2)]]" name="message"/>
+                    <property value="INFO" name="level"/>
+                    <property name="category"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <scope type="org.mule.tooling.ui.modules.core.scope.enricher" name="Message Enricher" entity-id="Message Enricher#1">
+                <properties>
+                    <property value="#[payload['lookupoutput']]" name="source"/>
+                    <property value="#[flowVars['customlookupvalue']]" name="target"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                </properties>
+                <compartment entity-id="compartment#1">
+                    <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#2">
+                        <scope type="http://www.mulesoft.org/schema/mule/core/processor-chain" name="Processor Chain" entity-id="Processor Chain#1">
+                            <properties>
+<property value="13" name="auxiliary;index"/>
+<property value="13" name="auxiliary;index"/>
+<property value="13" name="auxiliary;index"/>
+                            </properties>
+                            <compartment entity-id="compartment#2">
+<lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#3">
+    <pattern type="http://www.mulesoft.org/schema/mule/ee/data-mapper/data-mapper-connector" name="DataMapper" entity-id="DataMapper#2">
+        <properties>
+            <property value="string-string" name="config-ref"/>
+            <property value="http://www.mulesoft.org/schema/mule/ee/data-mapper/transform" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+            <property value="string-string" name="config-ref"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="#[groovy:[Filepath:originalFileTokens.getAt(originalFileTokens.size()-2)]]" name="input-ref"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+        </properties>
+    </pattern>
+    <pattern type="http://www.mulesoft.org/schema/mule/core/logger" name="Logger" entity-id="Logger#2">
+        <properties>
+            <property value="Shuba 2 - #[payload]" name="message"/>
+            <property value="INFO" name="level"/>
+            <property name="category"/>
+            <property value="15" name="auxiliary;index"/>
+            <property value="15" name="auxiliary;index"/>
+            <property value="15" name="auxiliary;index"/>
+        </properties>
+    </pattern>
+</lane>
+                            </compartment>
+                        </scope>
+                    </lane>
+                </compartment>
+            </scope>
+            <pattern type="http://www.mulesoft.org/schema/mule/scripting/groovyTransformer" name="Build New File Path" entity-id="Groovy#2">
+                <properties>
+                    <property name="returnClass"/>
+                    <property name="ignoreBadInput"/>
+                    <property name="encoding"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property name="mimeType"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script;0">
+                        <property value="Groovy" name="engine"/>
+                        <property value="/Users/Shuba/Documents/Mule-Projects/demo-projects2/workspace3.3.1/mule-file-string-manipulation/src/main/resources/MyScript.groovy" name="file"/>
+                        <property value="17" name="auxiliary;wrapIn"/>
+                        <property value="17" name="auxiliary;index"/>
+                    </property-collection>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script-for-properties;0">
+                        <property value="Groovy" name="engine"/>
+                        <property value="/Users/Shuba/Documents/Mule-Projects/demo-projects2/workspace3.3.1/mule-file-string-manipulation/src/main/resources/MyScript.groovy" name="file"/>
+                        <property value="17" name="auxiliary;wrapIn"/>
+                        <property value="17" name="auxiliary;index"/>
+                    </property-collection>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/core/logger" name="Logger" entity-id="Logger#3">
+                <properties>
+                    <property name="message"/>
+                    <property value="INFO" name="level"/>
+                    <property name="category"/>
+                    <property value="18" name="auxiliary;index"/>
+                    <property value="18" name="auxiliary;index"/>
+                    <property value="18" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <splitter index="19" type="org.mule.tooling.ui.modules.core.pattern.cbr" name="Choice" entity-id="Choice#1">
+                <properties>
+                    <property value="19" name=";INDEX"/>
+                    <property value="19" name=";INDEX"/>
+                    <property value="19" name=";INDEX"/>
+                    <property value="19" name=";INDEX"/>
+                    <property-collection name="bcb14d1b-f683-4705-8b2e-35b798701669">
+                        <property value="#[groovy:originalFileTokens.getAt(2)=='Shuba']" name="choice.expression"/>
+                        <property-collection name="choice.attributes">
+                            <property value="#[groovy:originalFileTokens.getAt(2)=='Shuba']" name="expression"/>
+                        </property-collection>
+                    </property-collection>
+                    <property-collection name="aae5665b-8428-4dde-bcaa-e6fbb6d4793a">
+                        <property value="true" name="choice.otherwise"/>
+                        <property-collection name="choice.attributes"/>
+                    </property-collection>
+                </properties>
+                <pattern type="org.mule.tooling.ui.modules.core.pattern.cbr" name="Choice" entity-id="Choice#2">
+                    <properties>
+                        <property value="19" name=";INDEX"/>
+                        <property value="19" name=";INDEX"/>
+                        <property value="19" name=";INDEX"/>
+                        <property value="19" name=";INDEX"/>
+                        <property-collection name="bcb14d1b-f683-4705-8b2e-35b798701669">
+                            <property value="#[groovy:originalFileTokens.getAt(2)=='Shuba']" name="choice.expression"/>
+                            <property-collection name="choice.attributes">
+<property value="#[groovy:originalFileTokens.getAt(2)=='Shuba']" name="expression"/>
+                            </property-collection>
+                        </property-collection>
+                        <property-collection name="aae5665b-8428-4dde-bcaa-e6fbb6d4793a">
+                            <property value="true" name="choice.otherwise"/>
+                            <property-collection name="choice.attributes"/>
+                        </property-collection>
+                    </properties>
+                </pattern>
+                <compartment entity-id="compartment#3">
+                    <lane isChoiceOtherwiseLane="false" index="21" hadOnlyOneElement="false" entity-id="bcb14d1b-f683-4705-8b2e-35b798701669">
+                        <endpoint message-exchange-pattern="OneWay" direction="Outbound" type="http://www.mulesoft.org/schema/mule/file/endpoint" name="File Outbound Write" entity-id="File#5">
+                            <properties>
+<property value="one-way" name="exchange-pattern"/>
+<property value="#[newFilePathName]" name="path"/>
+<property value="#[originalFileName]" name="outputPattern"/>
+<property name="moveToPattern"/>
+<property name="moveToDirectory"/>
+<property value="22" name="auxiliary;index"/>
+<property name="pollingFrequency"/>
+<property name="fileAge"/>
+<property value="22" name="auxiliary;index"/>
+<property value="22" name="auxiliary;index"/>
+<property value="22" name="auxiliary;index"/>
+<property name="businessEventsLabel"/>
+<property name="tracking:enable-default-events"/>
+<property value="22" name="auxiliary;index"/>
+<property name="address"/>
+<property value="10000" name="responseTimeout"/>
+<property name="encoding"/>
+<property name="disableTransportTransformer"/>
+<property name="mimeType"/>
+<property value="22" name="auxiliary;index"/>
+<property name="comparator"/>
+<property name="reverseOrder"/>
+<property value="22" name="auxiliary;index"/>
+<property value="22" name="auxiliary;index"/>
+<property value="File" name="connector-ref"/>
+<property name="ref"/>
+<property name="transformer-refs"/>
+<property value="22" name="auxiliary;index"/>
+<property value="22" name="auxiliary;index"/>
+<property value="22" name="auxiliary;index"/>
+                            </properties>
+                        </endpoint>
+                    </lane>
+                    <lane isChoiceOtherwiseLane="true" index="24" hadOnlyOneElement="false" entity-id="aae5665b-8428-4dde-bcaa-e6fbb6d4793a">
+                        <pattern type="http://www.mulesoft.org/schema/mule/core/logger" name="Logger" entity-id="Logger#4">
+                            <properties>
+<property value="Not Writing to File" name="message"/>
+<property value="INFO" name="level"/>
+<property name="category"/>
+<property value="25" name="auxiliary;index"/>
+<property value="25" name="auxiliary;index"/>
+<property value="25" name="auxiliary;index"/>
+                            </properties>
+                        </pattern>
+                    </lane>
+                </compartment>
+            </splitter>
+        </lane>
+    </flow>
+    <description></description>
+</mule-configuration>

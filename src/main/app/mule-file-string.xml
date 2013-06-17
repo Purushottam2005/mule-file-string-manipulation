@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+xmlns="http://www.mulesoft.org/schema/mule/core" 
+xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" 
+xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.3.1" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd 
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd 
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd 
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd 
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd 
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd ">
+    <file:connector name="FileInputConnector" autoDelete="true" streaming="true" validateConnections="true" doc:name="File">
+        <file:expression-filename-parser/>
+    </file:connector>
+    <file:connector name="FileOutputConnector" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+    <file:connector name="File" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+    <data-mapper:config name="string-string" transformationGraphPath="string-string.grf" doc:name="DataMapper"/>
+<flow name="mule-file-parser" doc:name="mule-file-parser">
+	<file:inbound-endpoint path="/Users/Shuba/Documents/Test" responseTimeout="10000" doc:name="File Inbound" connector-ref="FileInputConnector"/>
+         <scripting:transformer doc:name="Tokenize File Path">
+	                <scripting:script engine="Groovy">
+                <scripting:text><![CDATA[def originalFileName = message.getProperty('directory') + File.separator + message.getProperty('originalFileName');
+                                message.setInvocationProperty('originalFileTokens', originalFileName.split("/"));
+                                return payload;]]></scripting:text>
+	    			</scripting:script>
+	     </scripting:transformer>
+        <logger message="Shuba - #[groovy:[Filepath:originalFileTokens.getAt(originalFileTokens.size()-2)]]" level="INFO" doc:name="Logger"/>
+        <enricher source="#[payload['lookupoutput']]" target="#[flowVars['customlookupvalue']]" doc:name="Message Enricher">
+            <processor-chain doc:name="Processor Chain">
+               
+               <data-mapper:transform config-ref="string-string" input-ref="#[groovy:[Filepath:originalFileTokens.getAt(originalFileTokens.size()-2)]]" doc:name="DataMapper"/>
+                 <logger message="Shuba 2 - #[payload]" level="INFO" doc:name="Logger"/>
+     
+            </processor-chain>
+        </enricher>
+        <scripting:transformer doc:name="Build New File Path">
+            <scripting:script engine="Groovy" file="/Users/Shuba/Documents/Mule-Projects/demo-projects2/workspace3.3.1/mule-file-string-manipulation/src/main/resources/MyScript.groovy"/>
+        </scripting:transformer>
+        <logger level="INFO" doc:name="Logger"/>
+        <choice doc:name="Choice">
+            <when expression="#[groovy:originalFileTokens.getAt(2)=='Shuba']">
+                <processor-chain>
+                    <file:outbound-endpoint responseTimeout="10000" doc:name="File Outbound Write" connector-ref="File" outputPattern="#[originalFileName]" path="#[newFilePathName]"/>
+                </processor-chain>
+            </when>
+            <otherwise>
+                <processor-chain>
+                    <logger message="Not Writing to File" level="INFO" doc:name="Logger"/>
+                </processor-chain>
+            </otherwise>
+        </choice>  
+          
+       
+</flow>
+</mule>
